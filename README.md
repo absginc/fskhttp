@@ -9,9 +9,9 @@ Under the hood, the battle‑tested **ggwave** library manages modulation, frami
 
 Want to see it in action? Click the previews below to play the full demo videos:
 
-* CURL EXAMPLE </br><a href="https://youtu.be/Ljtt9q0Xdco"> <img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-curl-preview.gif" alt="cURL → WAV demo preview"> </a>
+* CURL EXAMPLE </br><a href="https://youtu.be/Ljtt9q0Xdco" target="_blank"> <img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-curl-preview.gif" alt="cURL → WAV demo preview"> </a>
 
-* POSTMAN EXAMPLE </br><a href="https://youtube.com/shorts/DiyRPAXlLL4"><img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-postman-preview.gif" alt="Postman decode demo preview"></a>
+* POSTMAN EXAMPLE </br><a href="https://youtube.com/shorts/DiyRPAXlLL4" target="_blank" ><img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-postman-preview.gif" alt="Postman decode demo preview"></a>
 
 ## Try it with the online demo
 
