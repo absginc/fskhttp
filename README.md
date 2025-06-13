@@ -1,26 +1,19 @@
-# README.md
+# FSKHTTP
+A virtual FSK Modem HTTP microservice made for efficient bot/agent ↔️ bot/agent communications.
 
 ## Introduction
 
-Welcome to **FSKHTTP**, your virtual FSK modem accessible via simple HTTP calls. Imagine two autonomous bots at a "GibberLink" hackathon. Bot A initiates a session, Bot B answers, and they negotiate a high‑efficiency FSK channel. Instead of handling raw audio streams, each bot posts JSON payloads—inclusive of encrypted data—to FSKHTTP’s `/encode` endpoint and receives back a WAV file filled with FSK tones. That same WAV file, when posted to `/decode`, returns the original byte stream as JSON.
+**FSKHTTP** is a virtual frequency-shift keying modem packaged as an HTTP microservice. Imagine two autonomous bots in the midst of a "GibberLink" hackathon challenge: Bot A initiates an FSK session, Bot B answers, and they agree on an optimized tone channel. Instead of converting text to speech and back, each bot posts its payload as JSON to /encode and receives a WAV file containing FSK tones. When that WAV is submitted to /decode, the service extracts the original byte stream and delivers it as JSON.
 
 Under the hood, the battle‑tested **ggwave** library manages modulation, framing, sample rates, and error detection; FSKHTTP simply wraps it in a REST interface. Upper layers handle encryption, compression, and routing—FSKHTTP remains laser‑focused on byte‑to‑tone and tone‑to‑byte translation.
 
-Want to see it in action? Check out these quick demos:
+Want to see it in action? Click the previews below to play the full demo videos:
 
+* CURL EXAMPLE </br><a href="https://youtu.be/Ljtt9q0Xdco"> <img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-curl-preview.gif" alt="cURL → WAV demo preview"> </a>
 
-* <a href="https://github.com/absginc/fskhttp/raw/main/example_vids/fskhttp-curl.mp4">
-  <img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-curl-preview.gif" alt="cURL → WAV demo preview">
-</a>
-* [▶️ cURL → WAV demo](./example_vids/fskhttp-curl.mp4)
+* POSTMAN EXAMPLE </br><a href="https://youtube.com/shorts/DiyRPAXlLL4"><img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-postman-preview.gif" alt="Postman decode demo preview"></a>
 
-* <a href="https://github.com/absginc/fskhttp/raw/main/example_vids/fskhttp-postman.mp4">
-  <img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-postman-preview.gif" alt="Postman decode demo preview">
-</a>
-* [▶️ WAV → JSON demo](./example_vids/fskhttp-postman.mp4)
-
-
-## Try the online demo
+## Try it with the online demo
 
 ### Text → FSK → WAV
 
@@ -37,7 +30,7 @@ RESPONSE
                                  Dload  Upload   Total   Spent    Left  Speed
 100  340k  100  340k  100    59   705k    122 --:--:-- --:--:-- --:--:--  704k
 ```
-You can play encoded.wav, and also ship it back to be DECODED
+You can play the `encoded.wav` Also ship it back to the /decode endpoint to be DECODED
 
 
 ### WAV → DECODE FSK → JSON TEXT
@@ -64,9 +57,10 @@ RESPONSE
   "success": true
 }
 ```
+
 ## Quick Start
 
-Get a single-instance service up in seconds:
+Get started quickly with a single-instance service and have it up in seconds:
 
 ### Option A: Pull from Docker Hub
 
@@ -130,7 +124,7 @@ curl -X POST \
 For high availability, load‑balancing, health checks, and metrics, use Docker Compose:
 
 ```bash
-git clone https://github.com/your-org/fskhttp.git
+git clone https://github.com/absginc/fskhttp.git
 cd fskhttp
 docker-compose up --build -d
 ```
@@ -161,6 +155,6 @@ A full scaling guide—covering tuning, HPA, security contexts, ingress TLS, res
 
 * **Modular**: Drop‑in HTTP API for any system needing tone‑based data exchange.
 * **Efficient**: Offloads audio encoding/decoding, letting bots focus on logic and encryption.
-* **Extensible**: Layers above handle encryption, framing, and routing—FSKHTTP just handles the telecom layer.
+* **Extensible**: Layers above handle encryption, framing, and routing—FSKHTTP just handles the audio layer.
 
-Use FSKHTTP as your microservice for reliable, tone‑based signaling between machines, bots, or any application requiring an FSK channel over HTTP.
+Use FSKHTTP as your microservice for reliable, tone‑based signaling between machines, bots, or any application requiring an FSK channel, utilized simply over HTTP.
