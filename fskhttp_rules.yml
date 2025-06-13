@@ -1,0 +1,57 @@
+# Alert Rules (fskhttp_rules.yml)
+groups:
+- name: fskhttp
+  rules:
+  - alert: FSKHTTPHighErrorRate
+    expr: (rate(fskhttp_requests_failed_total[5m]) / rate(fskhttp_requests_total[5m])) > 0.1
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High error rate detected"
+      description: "Error rate is {{ $value | humanizePercentage }} for the last 5 minutes"
+
+  - alert: FSKHTTPHighLatency
+    expr: histogram_quantile(0.95, rate(fskhttp_request_duration_seconds_bucket[5m])) > 10
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High latency detected"
+      description: "95th percentile latency is {{ $value }}s"
+
+  - alert: FSKHTTPServiceDown
+    expr: up{job="fskhttp"} == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "FSK HTTP service is down"
+      description: "Service {{ $labels.instance }} has been down for more than 1 minute"
+
+  - alert: FSKHTTPHighCPU
+    expr: (rate(cpu_percent[5m])) > 80
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU usage"
+      description: "CPU usage is {{ $value }}% on {{ $labels.instance }}"
+
+  - alert: FSKHTTPHighMemory
+    expr: memory_percent > 85
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High memory usage"
+      description: "Memory usage is {{ $value }}% on {{ $labels.instance }}"
+
+  - alert: FSKHTTPTooManyActiveRequests
+    expr: fskhttp_requests_active > 40
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Too many active requests"
+      description: "{{ $value }} active requests on {{ $labels.instance }}"
