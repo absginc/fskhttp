@@ -97,7 +97,7 @@ docker run -d \
 ### Option B: Build and Run Locally
 
 ```bash
-git clone https://github.com/your-org/fskhttp.git
+git clone https://github.com/absginc/fskhttp.git
 cd fskhttp
 # Build image
 docker build -t fskhttp:latest .
