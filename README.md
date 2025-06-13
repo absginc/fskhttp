@@ -8,9 +8,62 @@ Under the hood, the battle‑tested **ggwave** library manages modulation, frami
 
 Want to see it in action? Check out these quick demos:
 
+
+* <a href="https://github.com/absginc/fskhttp/raw/main/example_vids/fskhttp-curl.mp4">
+  <img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-curl-preview.gif" alt="cURL → WAV demo preview">
+</a>
 * [▶️ cURL → WAV demo](./example_vids/fskhttp-curl.mp4)
+
+* <a href="https://github.com/absginc/fskhttp/raw/main/example_vids/fskhttp-postman.mp4">
+  <img width="25%" src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-postman-preview.gif" alt="Postman decode demo preview">
+</a>
 * [▶️ WAV → JSON demo](./example_vids/fskhttp-postman.mp4)
 
+
+## Try the online demo
+
+### Text → FSK → WAV
+
+```bash
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"text":"ROBOTS talking to ROBOTS bots will speak to bots"}' \
+  https://fskhttps.sipsaker.com/encode \
+  -o encoded.wav
+```
+RESPONSE
+```bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  340k  100  340k  100    59   705k    122 --:--:-- --:--:-- --:--:--  704k
+```
+You can play encoded.wav, and also ship it back to be DECODED
+
+
+### WAV → DECODE FSK → JSON TEXT
+
+```bash
+curl -X POST \
+  -F "file=@encoded.wav" \
+  https://fskhttps.sipsaker.com/decode
+```
+
+RESPONSE
+```json
+{
+  "audio_info": {
+    "bps": 16,
+    "channels": 1,
+    "sample_rate": 48000,
+    "total_samples": 174080
+  },
+  "decoded_text": "ROBOTS talking to ROBOTS bots will speak to bots",
+  "message_length": 48,
+  "processing_thread": "ThreadPoolExecutor-0_0",
+  "processing_time_seconds": 0.055,
+  "success": true
+}
+```
 ## Quick Start
 
 Get a single-instance service up in seconds:
