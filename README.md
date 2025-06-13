@@ -78,11 +78,20 @@ Get started quickly with a single-instance service and have it up in seconds:
 ### Option A: Pull from Docker Hub
 
 ```bash
-# Replace <your-namespace> with your Docker Hub repo once published
 docker run -d \
-  --name fskhttp \
+  --name fskhttp_service \
   -p 8080:8080 \
-  <your-namespace>/fskhttp:latest
+  absgscott/fskhttp_service:latest
+```
+
+####  Run the pulled image
+```bash
+docker run -d \
+  --name fskhttp_service \
+  -p 8080:8080 \
+  -e MAX_WORKERS=16 \
+  -e MAX_CONCURRENT_REQUESTS=50 \
+  absgscott/fskhttp_service:latest
 ```
 
 ### Option B: Build and Run Locally
