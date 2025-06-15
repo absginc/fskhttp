@@ -3,9 +3,9 @@ A virtual FSK Modem HTTP microservice made for efficient bot/agent ↔️ bot/ag
 
 ## Introduction
 
-**FSKHTTP** is a virtual frequency-shift keying modem packaged as an HTTP microservice. Imagine two autonomous bots in the midst of a "GibberLink" hackathon challenge: Bot A initiates an FSK session, Bot B answers, and they agree on an optimized tone channel. Instead of converting text to speech and back, each bot posts its payload as JSON to /encode and receives a WAV file containing FSK tones. When that WAV is submitted to /decode, the service extracts the original byte stream and delivers it as JSON.
+**FSKHTTP** is a virtual frequency-shift keying modem packaged as an HTTP microservice. Imagine two autonomous bots meeting in the wild.  This scenario was played out in a recently hackathon and they called this "GibberLink".   Bot A initiates a call, and Bot B answers. Realizing they are both BOTs, they agree on an optimized communications method.  Instead of converting text to speech and back, each bot posts its payload as JSON to the /encode endpoint of FSKHTTP  and receives a WAV file containing FSK tones.  When that WAV is submitted to the /decode endpoint, it extracts the original byte stream and delivers it  back as JSON.
 
-Under the hood, the battle‑tested **ggwave** library manages modulation, framing, sample rates, and error detection; FSKHTTP simply wraps it in a REST interface. Upper layers handle encryption, compression, and routing while FSKHTTP remains laser‑focused on byte‑to‑tone and tone‑to‑byte translation.
+Under the hood, the battle‑tested **ggwave** library manages modulation, framing, sample rates, and error detection; FSKHTTP wraps it in a REST interface.  Upper layers can optionally handle encryption, compression, and routing while FSKHTTP remains laser‑focused on byte‑to‑tone and tone‑to‑byte translation as a microservice.
 
 Want to see it in action? Click the previews below to play the full demo videos:
 
@@ -171,7 +171,7 @@ View metrics:
 
 ## Scaling & Kubernetes
 
-A full scaling guide—covering tuning, HPA, security contexts, ingress TLS, resource quotas, and more—is available in **scaling\_guide.MD**. See [Scaling Guide →](./scaling_guide.MD)
+A full scaling guide covering tuning, HPA, security contexts, ingress TLS, resource quotas, and more is available in **scaling\_guide.MD**. See [Scaling Guide →](./scaling_guide.MD)
 
 ## Why FSKHTTP?
 
