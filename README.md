@@ -138,15 +138,10 @@ curl -X POST \
   -F "file=@encoded.wav" \
   http://localhost:8080/decode
 ```
-https://youtube.com/shorts/DiyRPAXlLL4
-
-[▶️ Watch Postman demo](https://youtube.com/shorts/DiyRPAXlLL4)
-
-[▶️ Watch cURL demo](https://youtu.be/Ljtt9q0Xdco)
 
 ## Production Deployment
 
-For high availability, load‑balancing, health checks, and metrics, use Docker Compose:
+For high availability, load‑balancing, health checks, and metrics, use Docker Compose to start a redundant stack:
 
 ```bash
 git clone https://github.com/absginc/fskhttp.git
@@ -180,6 +175,6 @@ A full scaling guide covering [Kubernetes](./kubernetes.ctl), tuning, HPA, secur
 
 * **Modular**: Drop‑in HTTP API for any system needing tone‑based data exchange.
 * **Efficient**: Offloads audio encoding/decoding, letting bots focus on logic and encryption.
-* **Extensible**: Layers above handle encryption, framing, and routing—FSKHTTP just handles the audio layer.
+* **Extensible**: Layers above handle encryption, framing, and routing.  FSKHTTP handles the audio layer.
 
 Use FSKHTTP as your microservice for reliable, tone‑based signaling between machines, bots, or any application requiring an FSK channel, utilized simply over HTTP.
