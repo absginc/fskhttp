@@ -7,7 +7,10 @@ A virtual FSK Modem HTTP microservice <br/>made for efficient bot/agent ↔️ b
 
 <a href="https://fskhttp.com/tool.html" target="_blank" rel="noopener noreferrer">Try it IN BROWSER on FSKHTTP.COM/tool.html</a>
 
-Under the hood, the battle‑tested **ggwave** library manages modulation, framing, sample rates, and error detection; FSKHTTP wraps it in a REST interface.  Upper layers can optionally handle encryption, compression, and routing while FSKHTTP remains laser‑focused on byte‑to‑tone and tone‑to‑byte translation as a microservice.
+
+
+
+Under the hood, the battle‑tested [**ggwave**](https://github.com/ggerganov/ggwave) library manages modulation, framing, sample rates, and error detection; FSKHTTP wraps it in a REST interface.  Upper layers can optionally handle encryption, compression, and routing while FSKHTTP remains laser‑focused on byte‑to‑tone and tone‑to‑byte translation as a microservice.
 
 Want to see it in action? Click the previews below to play the full demo videos:
 
