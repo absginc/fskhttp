@@ -34,7 +34,7 @@ Want to see it in action? Click the previews below to play the full demo videos:
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"text":"ROBOTS talking to ROBOTS bots will speak to bots"}' \
-  https://fskhttps.sipsaker.com/encode \
+  https://fskhttp.com/encode \
   -o encoded.wav
 ```
 RESPONSE
@@ -51,7 +51,7 @@ You can play the `encoded.wav` Also ship it back to the /decode endpoint to be D
 ```bash
 curl -X POST \
   -F "file=@encoded.wav" \
-  https://fskhttps.sipsaker.com/decode
+  https://fskhttp.com/decode
 ```
 
 RESPONSE
