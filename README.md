@@ -136,10 +136,11 @@ curl -X POST \
   -F "file=@encoded.wav" \
   http://localhost:8080/decode
 ```
+https://youtube.com/shorts/DiyRPAXlLL4
 
-[▶️ Watch Postman demo](./example_vids/fskhttp-postman.mp4)
+[▶️ Watch Postman demo](https://youtube.com/shorts/DiyRPAXlLL4)
 
-[▶️ Watch cURL demo](./example_vids/fskhttp-curl.mp4)
+[▶️ Watch cURL demo](https://youtu.be/Ljtt9q0Xdco)
 
 ## Production Deployment
 
@@ -171,7 +172,7 @@ View metrics:
 
 ## Scaling & Kubernetes
 
-A full scaling guide covering tuning, HPA, security contexts, ingress TLS, resource quotas, and more is available in **scaling\_guide.MD**. See [Scaling Guide →](./scaling_guide.MD)
+A full scaling guide covering [Kubernetes](./kubernetes.ctl), tuning, HPA, security contexts, ingress TLS, resource quotas, and more is available in **scaling\_guide.MD**. See [Scaling Guide →](./scaling_guide.MD)
 
 ## Why FSKHTTP?
 
