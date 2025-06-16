@@ -169,7 +169,7 @@ View metrics:
 
 ## Scaling & Kubernetes
 
-A full scaling guide covering [Kubernetes](./kubernetes.ctl), tuning, HPA, security contexts, ingress TLS, resource quotas, and more is available in **scaling\_guide.MD**. See [Scaling Guide →](./scaling_guide.MD)
+A full scaling guide covering [Kubernetes](./kubernetes.ctl), tuning, HPA, security contexts, ingress TLS, resource quotas, and more is available in **scaling\_guide.MD**. <br/>See [Scaling Guide →](./scaling_guide.MD)
 
 ## Why FSKHTTP?
 
