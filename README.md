@@ -1,5 +1,5 @@
 # FSKHTTP
-A virtual FSK Modem HTTP microservice <br/>made for efficient bot/agent ↔️ bot/agent communications.
+A virtual FSK Modem HTTP microservice made for efficient bot/agent ↔️ bot/agent communications.
 
 ## Introduction
 
@@ -7,28 +7,37 @@ A virtual FSK Modem HTTP microservice <br/>made for efficient bot/agent ↔️ b
 
 Under the hood, the battle‑tested [**ggwave**](https://github.com/ggerganov/ggwave) library manages modulation, framing, sample rates, and error detection; [FSKHTTP](https://fskhttp.com/) wraps it in a REST interface.  Upper layers can optionally handle encryption, compression, and routing while FSKHTTP remains laser‑focused on byte‑to‑tone and tone‑to‑byte translation as a microservice.
 
-Want to see it in action? Click the previews below to play the full demo videos:
-
+Want to see it in action? Click below to see full demos:
+https://fskhttp.com/documentation
 * CURL EXAMPLE  
-  <a href="https://youtu.be/Ljtt9q0Xdco" target="_blank" rel="noopener noreferrer">
+
+  <a href="https://fskhttp.com/documentation" target="_blank" rel="noopener noreferrer">
     <img
-      width="25%"
-      src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-curl-preview.gif"
-      alt="cURL → WAV demo preview"
+      width="80%"
+      src="https://github.com/absginc/fskhttp/raw/main/example_vids/encodeexample.png"
+      alt=ENCODE EXAMPLE"
+    />
+  </a>
+
+  <a href="https://fskhttp.com/documentation" target="_blank" rel="noopener noreferrer">
+    <img
+      width="80%"
+      src="https://github.com/absginc/fskhttp/raw/main/example_vids/decodeexample.png"
+      alt="DECODE EXAMPLE"
     />
   </a>
 
 * POSTMAN EXAMPLE  
   <a href="https://youtube.com/shorts/DiyRPAXlLL4" target="_blank" rel="noopener noreferrer">
     <img
-      width="25%"
+      width="50%"
       src="https://github.com/absginc/fskhttp/raw/main/example_vids/fkxhttp-postman-preview.gif"
       alt="Postman decode demo preview"
     />
   </a>
 ## Try it with the online demo
 
-ENCODE and DECODE in your browser on <a href="https://fskhttp.com/tool.html" target="_blank" rel="noopener noreferrer">FSKHTTP.COM/tool.html</a>
+ENCODE and DECODE in your browser on <a href="https://fskhttp.com/tool" target="_blank" rel="noopener noreferrer">FSKHTTP.COM/tool</a>
 
 ### Text → FSK → WAV
 
