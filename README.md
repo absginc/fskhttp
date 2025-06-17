@@ -13,6 +13,14 @@ A virtual FSK Modem HTTP microservice made for efficient bot/agent ↔️ bot/ag
 
 **FSKHTTP** is a virtual frequency-shift keying modem packaged as an HTTP microservice. Imagine two autonomous bots meeting in the wild.  This scenario was played out in a recently hackathon and they called this "[GibberLink](https://www.youtube.com/watch?v=FO81yQGgIXA)".   Bot A initiates a call, and Bot B answers. Realizing they are both BOTs, they agree on an optimized communications method.  Instead of converting text to speech and back, each bot posts its payload as JSON to the /encode endpoint of FSKHTTP  and receives a WAV file containing FSK tones.  When that WAV is submitted to the /decode endpoint, it extracts the original byte stream and delivers it  back as JSON.
 
+  <a href="https://www.youtube.com/shorts/FO81yQGgIXA" target="_blank" rel="noopener noreferrer">
+    <img
+      width="50%"
+      src="https://github.com/absginc/fskhttp/raw/main/example_vids/youtubepreview.png"
+      alt=ENCODE EXAMPLE"
+    />
+  </a>
+
 Under the hood, the battle‑tested [**ggwave**](https://github.com/ggerganov/ggwave) library manages modulation, framing, sample rates, and error detection; [FSKHTTP](https://fskhttp.com/) wraps it in a REST interface.  Upper layers can optionally handle encryption, compression, and routing while FSKHTTP remains laser‑focused on byte‑to‑tone and tone‑to‑byte translation as a microservice.
 
 Want to see it in action? Click below to see full demos:
