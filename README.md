@@ -1,7 +1,7 @@
   <a href="https://fskhttp.com/" target="_blank" rel="noopener noreferrer">
     <img
       width="100%"
-      src="https://github.com/absginc/fskhttp/raw/main/example_vids/fskhttpdocusite1024.png"
+      src="https://github.com/absginc/fskhttp/raw/main/example_vids/fskhttplogo1.png"
       alt=ENCODE EXAMPLE"
     />
   </a>
